@@ -1,0 +1,204 @@
+#imgModal input{
+  height: auto;
+  padding: 5px;
+  border-color: #006297;
+}
+
+/* MODAL UPLOAD CONTENT */
+
+.content-upload{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+.content-upload img{
+  /*height: 100%;*/
+  max-height: 100%;
+}
+
+/* UPLOAD IMAGE */
+
+.image-input{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label.btn-upload-image{
+  color: #006297;
+  border: 2px solid #006297;
+
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 15px 30px;
+}
+
+/* EDIT IMAGE */
+
+.content-edit{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-preview-wrapper{
+  flex-grow: 1;
+  display: flex;
+
+  height: 0%;
+}
+
+.image-preview:before {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  content: "";
+}
+
+.image-preview{
+  flex: 1 0 0;
+  margin-right: 10px;
+  text-align: center;
+}
+.image-preview img{
+  display: inline-block;
+  vertical-align: middle;
+
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.toolbar-panel{
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.toolbar-panel .control{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toolbar-panel .control:last-child{
+  margin-bottom: 0;
+}
+
+.toolbar-panel .control span{
+  width: 100px;
+}
+
+.toolbar-panel .rotate i{
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.image-themes{
+  align-self: flex-end;
+  flex-shrink: 0;
+  margin-top: 10px;
+  height: 100px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+#imgModal .rotate-left,
+#imgModal .rotate-right{
+  color: #006297;
+}
+
+#imgModal.loading .js-rotate-left,
+#imgModal.loading .js-rotate-right,
+#imgModal.loading .btn-wrapper
+{
+  opacity: 0.5;
+}
+
+.btn-wrapper{
+  display: flex;
+}
+
+.btn-wrapper .ui-btn{
+  flex: 1;
+}
+
+.btn-wrapper .ui-btn:first-child{
+  margin-right: 5px;
+}
+.btn-wrapper .ui-btn:last-child{
+  margin-left: 5px;
+}
+
+/* CAROUSEL */
+
+.owl-carousel{
+  position: relative;
+  height: 100%;
+}
+
+.owl-carousel.owl-loaded{
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next{
+  font-size: 55px;
+  position: absolute;
+  margin-top: -39.2px;
+  top: 50%;
+  color: #006297;
+}
+
+.owl-carousel .owl-nav .owl-prev{
+  left: -30px;
+}
+.owl-carousel .owl-nav .owl-next{
+  right: -30px;
+}
+
+.theme{
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100px;
+}
+.owl-carousel .owl-item img{
+  width: auto;
+  height: auto;
+  max-height: 80px;
+  max-width: 100%;
+}
+.theme .theme-name{
+  width: 100%;
+  text-align: center;
+  color: #00466c;
+}
+
+.theme-desaturate img{
+  filter: grayscale(100%)
+}
+.theme-blur img{
+  filter: blur(0.5px);
+}
+.theme-brighten img{
+  filter: brightness(1.5);
+}
+.theme-contrast img{
+  filter: contrast(1.5);
+}
+.theme-invert img{
+  filter: invert();
+}
+.theme-sepia img{
+  filter: sepia(1);
+}
+.theme-sharpen img{
+  filter: saturate(8);
+}
